@@ -1,6 +1,6 @@
 ---
 layout: category
-title: Documentation
+title: Editors
 category: documentation
-permalink: /documentation
+permalink: /editors
 ---
