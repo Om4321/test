@@ -1,6 +1,5 @@
 ---
-layout: category
+layout: profile
 title: Editors
-category: documentation
 permalink: /editors
 ---
