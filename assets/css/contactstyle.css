@@ -1,97 +1,154 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
 }
+body{
+    height: 100vh;
+    width: 50vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fae9fb;
+    position: relative;
+  }
 
-body {
-    background: #1b1c1e;
-    text-align: center;
+.container{
+  z-index: 12;
+  max-width: 1050px;
+  width: 100%;
+  background: rgb(44, 44, 44);
+  border-radius: 12px;
+  margin: 0 20px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
 }
-
-h1 {
-    font-family: 'Playfair Display',
-        serif;
-    font-size: 59px;
-    color: white;
-    font-weight: 600;
-    padding-bottom: 20px;
+.container .content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 20px;
 }
-
-p {
-    color: #d2d2d2;
+.content .image-box{
+  max-width: 55%;
 }
-
-p,
-input,
-textarea,
-label {
-    font-family: 'Poppins',
-        sans-serif;
+.content .image-box img{
+  width: 100%;
 }
-
-.container {
-    max-width: 1320px;
-    margin: 0 auto;
-    padding: 5%;
+.content .topic{
+  font-size: 22px;
+  font-weight: 500;
+  color: #3f3f3f;
 }
-
-form {
-    max-width: 500px;
-    margin: 0 auto;
-    text-align: left;
-    padding: 20px 0;
+.content form{
+  width: 100%;
+  margin-right: 30px;
+  margin-left: 30px;
 }
-
-input,
-textarea,
-label {
-    display: block;
-    margin: 0 auto;
+.content .input-box{
+  height: 50px;
+  width: 100%;
+  margin: 16px 0;
+  position: relative;
+}
+.content .input-box input{
+    position: absolute;
+    height: 100%;
     width: 100%;
-    color: #828282;
+    border-radius: 6px;
+    font-size: 16px;
+    outline: none;
+    padding-left: 16px;
+    background: #3f3f3f;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+  }
+.content .input-box input:focus,
+.content .input-box input:valid{
+  border-color: #3f3f3f;
+  background-color: #fff;
 }
-
-input,
-textarea {
-    background-color: transparent;
-    border: 0;
-    border-bottom: 2px solid #828282;
+.content .input-box label{
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  color: #ffffff;
+  font-size: 15px;
+  pointer-events: none;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
 }
-
-input[type=submit] {
-    background-color: #545557;
-    padding: 15px 0;
-    color: white;
-    font-size: 18px;
-    border-bottom: none;
-    margin-top: 30px;
-    cursor: pointer;
-    transition: all .3s ease;
+.content .input-box input:focus ~ label,
+.content .input-box input:valid ~ label{
+  top: 0;
+  left: 12px;
+  display: 14px;
+  color: #3f3f3f;
+  background: #fff;
 }
-
-input[type=submit]:hover {
-    background: #FFF;
-    color: #1b1c1e;
+.content .message-box{
+  min-height: 100px;
+  position: relative;
 }
-
-input,
-textarea {
-    color: white;
-    font-size: 18px;
-    padding: 10px;
+.content .message-box textarea{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  resize: none;
+  background: #3f3f3f;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  outline: none;
+  transition all 0.3s ease;
 }
-
-input:focus,
-textarea:focus {
-    outline: 1px solid #828282;
+.content .message-box textarea:focus{
+  border-color: #3f3f3f;
+  background-color: #fff;
 }
-
-a {
-    color: #828282;
-    font-style: italic;
+.content .message-box label{
+  position: absolute;
+  font-size: 16px;
+  color: #636c72;
+  left: 18px;
+  top: 6px;
+  pointer-events: none;
+  transition: all 0.3s ease;
 }
-
-a:hover {
-    color: #fff;
+.content .message-box textarea:focus ~ label{
+  left: 12px;
+  top: -10px;
+  color: #3f3f3f;
+  font-size: 14px;
+  background: #fff;
+}
+.content .input-box input[type="submit"]{
+  color: #fff;
+  background: #3f3f3f;
+  padding-left: 0;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+.content .input-box input[type="submit"]:hover{
+  background-color: #3f3f3f;
+}
+@media (max-width:1000px) {
+  .content .image-box{
+    max-width: 70%;
+  }
+  .content{
+    padding: 10px 0;
+  }
+}
+@media (max-width:900px) {
+  .content .image-box{
+    display: none;
+  }
+  .content form{
+    width: 100%;
+    margin-left: 30px;
+  }
 }
