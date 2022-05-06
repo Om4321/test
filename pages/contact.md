@@ -1,6 +1,5 @@
 ---
-layout: page
-category: contact
+layout: contact
 permalink: /contact
 ---
 
