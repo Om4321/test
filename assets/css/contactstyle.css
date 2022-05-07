@@ -1,154 +1,87 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins',sans-serif;
+*,
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+    font-weight: 500;
 }
 body{
     height: 100vh;
-    width: 50vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #fae9fb;
-    position: relative;
-  }
-
+    background: linear-gradient(
+        135deg,
+        #6f6df4,
+        #4c46f5
+    );
+}
 .container{
-  z-index: 12;
-  max-width: 1050px;
-  width: 100%;
-  background: rgb(44, 44, 44);
-  border-radius: 12px;
-  margin: 0 20px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
-}
-.container .content{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 25px 20px;
-}
-.content .image-box{
-  max-width: 55%;
-}
-.content .image-box img{
-  width: 100%;
-}
-.content .topic{
-  font-size: 22px;
-  font-weight: 500;
-  color: #3f3f3f;
-}
-.content form{
-  width: 100%;
-  margin-right: 30px;
-  margin-left: 30px;
-}
-.content .input-box{
-  height: 50px;
-  width: 100%;
-  margin: 16px 0;
-  position: relative;
-}
-.content .input-box input{
+    background-color: #ffffff;
+    width: 70%;
+    min-width: 420px;
+    padding: 35px 50px;
+    transform: translate(-50%,-50%);
     position: absolute;
-    height: 100%;
+    left: 50%;
+    top: 50%;
+    border-radius: 10px;
+    box-shadow: 20px 30px 25px rgba(0,0,0,0.15);
+}
+h1{
+    font-size: 30px;
+    text-align: center;
+    color: #1c093c;
+}
+p{
+    position: relative;
+    margin: auto;
     width: 100%;
-    border-radius: 6px;
-    font-size: 16px;
+    text-align: center;
+    color: #606060;
+    font-size: 14px;
+    font-weight: 400;
+}
+form{
+    width: 100%;
+    position: relative;
+    margin: 30px auto 0 auto;
+}
+.row{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    grid-gap: 20px 30px;
+    margin-bottom: 20px;
+}
+label{
+    color: #1c093c;
+    font-size: 14px;
+}
+textarea,
+input{
+    width: 100%;
+    font-weight: 400;
+    padding: 8px 10px;
+    border-radius: 5px;
+    border: 1.2px solid #c4cae0;
+    margin-top: 5px;
+}
+textarea{
+    resize: none;
+}
+textarea:focus,
+input:focus{
     outline: none;
-    padding-left: 16px;
-    background: #3f3f3f;
-    border: 2px solid transparent;
-    transition: all 0.3s ease;
-  }
-.content .input-box input:focus,
-.content .input-box input:valid{
-  border-color: #3f3f3f;
-  background-color: #fff;
+    border-color: #6f6df4;
 }
-.content .input-box label{
-  position: absolute;
-  left: 18px;
-  top: 50%;
-  color: #ffffff;
-  font-size: 15px;
-  pointer-events: none;
-  transform: translateY(-50%);
-  transition: all 0.3s ease;
-}
-.content .input-box input:focus ~ label,
-.content .input-box input:valid ~ label{
-  top: 0;
-  left: 12px;
-  display: 14px;
-  color: #3f3f3f;
-  background: #fff;
-}
-.content .message-box{
-  min-height: 100px;
-  position: relative;
-}
-.content .message-box textarea{
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  resize: none;
-  background: #3f3f3f;
-  border: 2px solid transparent;
-  border-radius: 6px;
-  outline: none;
-  transition all 0.3s ease;
-}
-.content .message-box textarea:focus{
-  border-color: #3f3f3f;
-  background-color: #fff;
-}
-.content .message-box label{
-  position: absolute;
-  font-size: 16px;
-  color: #636c72;
-  left: 18px;
-  top: 6px;
-  pointer-events: none;
-  transition: all 0.3s ease;
-}
-.content .message-box textarea:focus ~ label{
-  left: 12px;
-  top: -10px;
-  color: #3f3f3f;
-  font-size: 14px;
-  background: #fff;
-}
-.content .input-box input[type="submit"]{
-  color: #fff;
-  background: #3f3f3f;
-  padding-left: 0;
-  font-size: 18px;
-  font-weight: 500;
-  cursor: pointer;
-  letter-spacing: 1px;
-  transition: all 0.3s ease;
-}
-.content .input-box input[type="submit"]:hover{
-  background-color: #3f3f3f;
-}
-@media (max-width:1000px) {
-  .content .image-box{
-    max-width: 70%;
-  }
-  .content{
-    padding: 10px 0;
-  }
-}
-@media (max-width:900px) {
-  .content .image-box{
-    display: none;
-  }
-  .content form{
-    width: 100%;
-    margin-left: 30px;
-  }
+button{
+    border: none;
+    padding: 10px 20px;
+    background: linear-gradient(
+        130deg,
+        #6f6df4,
+        #4c46f5
+    );
+    color: #ffffff;
+    border-radius: 3px;
 }
