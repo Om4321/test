@@ -81,15 +81,12 @@ textarea{
 textarea:focus,
 input:focus{
     outline: none;
-    border-color: #5356ff;
+    border-color: #4a6af7;
 }
 button{
     border: none;
     padding: 10px 20px;
-    background: linear-gradient(
-        130deg,
-        #5356ff,
-        #5356ff
+    background-color: #4a6af7;
     );
     color: #ffffff;
     border-radius: 3px;
