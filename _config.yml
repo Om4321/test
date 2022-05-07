@@ -11,7 +11,7 @@ plugins:             [jekyll-paginate, jekyll-sitemap, jekyll-feed, jekyll-seo-t
 
 # Customise atom feed settings (this is where Jekyll-Feed gets configuration information)
 title:		           "The Journal of High School Discovery"
-description:	       "science journal for buddying scientists of the future"
+description:	       "science journal for budding scientists of the future"
 author:              "tjhsd"
 
 # RSS 2.0 can be used instead of Atom by uncommenting following two lines
