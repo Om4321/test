@@ -1,8 +1,10 @@
-/*
+
 .site-header {
   min-height: 56px;
+  /*
   width: $container-width;
   position: fixed;
+  */
   background-color: white;
   box-shadow: 0 5px 6px -6px #bbb;
   z-index: 100;
@@ -40,7 +42,7 @@
 /*
   Responsiveness with a dropdown menu
 */
-/*
+
 @media (min-width: $container-width) {
   .dropbtn {
     display: none;
@@ -93,4 +95,4 @@
     background-color: #f1f1f1;
   }
 }
-*/
+
